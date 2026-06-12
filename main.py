@@ -38,8 +38,9 @@ def load_rules():
     global _RULES
     if _RULES is None:
         rules_path = Path(__file__).parent / "rules.json"
-        with open(rules_path) as f:
-            _RULES = json.load(f)
+       with open(rules_path) as f:
+    data = json.load(f)
+    _RULES = data if isinstance(data, list) else data.get("rules", [])
     return _RULES
 
 
