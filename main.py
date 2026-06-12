@@ -21,7 +21,7 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI(
     title="AACP Community Registry",
-    description="241 pre-validated AACP v1.1 coordination rules across 7 domains.",
+    description="241 pre-validated AACP v1.4 coordination rules across 7 domains.",
     version="1.0.0",
 )
 
@@ -50,7 +50,7 @@ def root():
     return {
         "name":         "AACP Community Registry",
         "version":      "1.0.0",
-        "aacp_version": "1.1",
+        "aacp_version": "1.4",
         "rules":        len(rules),
         "domains":      ["HR","FIN","SALES","LEGAL","IT","CS","MKT"],
         "endpoints": {
